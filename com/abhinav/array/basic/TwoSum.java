@@ -1,4 +1,4 @@
-package Java;
+package com.abhinav.array.basic;
 
 import java.util.HashMap;
 import java.util.Map;
