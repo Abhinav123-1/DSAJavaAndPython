@@ -1,5 +1,7 @@
 package com.abhinav.array.basic;
 
+import java.util.LinkedList;
+
 public class RotateArrayByK {
     public static void main(String[] args) {
         int [] nums = {1,2,3,4,5,6,7};
@@ -11,19 +13,16 @@ public class RotateArrayByK {
 
 class RotateArrayByKSolution{
     public void rotate(int[] arr, int k) {
-       //1,2,3,4,5,6,7
-       //0,1,2,3,4,5,6
-       //K = 3
-       //5,6,7,1,2,3,4
-       for(int i=0;i<arr.length;i++){
-        int temp  = arr[(i+k)%arr.length];
-        arr[(i+k)%arr.length] = arr[i];
-        arr[i] = temp;
-       }
+        LinkedList<Integer> ll = new LinkedList<>();
+        for(int num: arr){
+            ll.offer(num); //this uses queue
+        }
+        for(int i=0;i<arr.length;i++){
+            arr[(i+k)%arr.length] = ll.poll();
+        }
+    
+       
 
-       for(int i=0;i<arr.length;i++){
-        System.out.println(arr[i]);
-
-       }
+       
    }
 }
