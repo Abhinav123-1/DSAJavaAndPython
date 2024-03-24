@@ -19,10 +19,6 @@ class MaxConsecutiveOnesSolution{
                 sum = 0;
             }
         }
-
-
-        return maxSum;
-    
-        
+        return maxSum;     
     }
 }
