@@ -16,6 +16,8 @@ public class LongestSubArrayWithSumK {
 
 class LongestSubArrayWithSumKSolutiopn{
     public static int longestSubarrayWithSumK(int []a, long k) {
+        //1, 2, 3, 1, 1, 1, 1
+        //3
         Map<Integer,Integer> prefixMap = new HashMap<>();
         int sum  =0;
         int maxLength = 0;
@@ -25,7 +27,7 @@ class LongestSubArrayWithSumKSolutiopn{
             if (sum == k)
                 maxLength = i + 1;
             else if (prefixMap.containsKey(sum - k))
-                maxLength = Math.max(maxLength, i - prefixMap.get(sum - k));
+                maxLength = Math.max(maxLength, prefixMap.get(sum - k));
             
             if (!prefixMap.containsKey(sum))
             prefixMap.put(sum, i);
