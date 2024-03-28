@@ -19,22 +19,14 @@ class SubArrayProductKSolution{
         if(k == 0 || k==1){
             return 0;
         }
-        int lowP = 0;
-        while(lowP<nums.length){
-            int highP = lowP+1;
-            prod *= nums[lowP];
-            if(prod<k){
-                count ++;
+        int left = 0;
+        for(int i=0;i<nums.length;i++){
+            prod*=nums[i];
+            while(prod>=k){
+                prod/=nums[left];
+                left++;
             }
-            while(highP<nums.length){
-                prod *= nums[highP];
-                if(prod<k){
-                    count ++;
-                }
-                highP++;
-            }
-            prod =1;
-            lowP++;
+            count+=i-left+1;
         }
        return count;
     }

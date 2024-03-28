@@ -8,12 +8,11 @@ public class SortColours {
 
 class SortColoursSolution{
     public void sortColors(int[] nums) {
-        //[2,0,2,1,1,0]
         int low,mid;
         int high;
         low = mid = 0;
         high = nums.length-1;
-        while(mid<=high){
+        while(high<=mid){
             if(nums[mid]==0){
                 int temp = nums[mid];
                 nums[low] = nums[mid];
