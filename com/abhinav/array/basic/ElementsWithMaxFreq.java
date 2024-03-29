@@ -8,32 +8,32 @@ import java.util.Map.Entry;
 //try it tom
 public class ElementsWithMaxFreq {
     public static void main(String[] args) {
-        int[] nums = {1,1,5,3,6,4};
+        int[] nums = {1,2,2,4,5,3,1};
         ElementsWithMaxFreqSolution ewmfs = new ElementsWithMaxFreqSolution();
         System.out.println(ewmfs.maxFrequencyElements(nums));
     }
 }
 
 class ElementsWithMaxFreqSolution{
+    //1,2,1,2,3,4
     public int maxFrequencyElements(int[] nums) {
-        Map<Integer,Integer> numsFreq =  new HashMap<>();
-        HashMap<Integer, Integer> numMap = new HashMap<>();
-        int count = 1;
-        for(int i=0;i<nums.length;i++){
-            if(numsFreq.containsKey(nums[i])){
-                numsFreq.put(nums[i],numsFreq.get(nums[i])+1);  
-                count = Math.max(numsFreq.get(nums[i]), count);
-            }else{
-                numsFreq.put(nums[i], 1);
-            }
-            if (numMap.containsKey(numsFreq.get(nums[i])))
-            numMap.put(numsFreq.get(nums[i]), numMap.get(numsFreq.get(nums[i])) + 1);
-        else
-        numMap.put(numsFreq.get(nums[i]), 1);
-    }
-
-    return numsFreq.get(count) * count;
-
-           
+       Map<Integer,Integer> countMap = new HashMap<>();
+       int max = 1;
+       int count = 0;
+       for(int i=0; i<nums.length;i++){
+        if(countMap.containsKey(nums[i])){
+            countMap.put(nums[i], countMap.get(nums[i])+1);
+            max = Math.max(max,countMap.get(nums[i]));
+        }else{
+            countMap.put(nums[i], 1);
+  
+        }
+       }
+       for(Entry entry: countMap.entrySet()){
+        if((int)entry.getValue() == max){
+            count ++;
+        }
+       }
+       return max*count;   
     }
 }

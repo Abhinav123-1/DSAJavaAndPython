@@ -12,7 +12,6 @@ public class CountSubArrays {
 
 class CountSubArraysSolution{
     public long countSubarrays(int[] nums, int k) {
-        Map<Integer,Integer> countMap = new HashMap<>();
         long count = 0;
         int leftPointer = 0;
         int rightPointer = 0;
@@ -35,10 +34,6 @@ class CountSubArraysSolution{
              if (nums[leftPointer] == maxNum) {
                 maxInWindow--;
             }
-
-
-
-
         }
 
 
