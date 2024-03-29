@@ -29,7 +29,7 @@ class ElementsWithMaxFreqSolution{
   
         }
        }
-       for(Entry entry: countMap.entrySet()){
+       for(Entry<Integer,Integer> entry: countMap.entrySet()){
         if((int)entry.getValue() == max){
             count ++;
         }

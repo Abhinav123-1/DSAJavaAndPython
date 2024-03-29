@@ -1,8 +1,7 @@
 package com.abhinav.array.basic;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class CountSubArrays {
     public static void main(String[] args) {

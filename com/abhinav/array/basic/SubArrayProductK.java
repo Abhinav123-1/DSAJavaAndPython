@@ -1,8 +1,5 @@
 package com.abhinav.array.basic;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class SubArrayProductK {
     public static void main(String[] args) {
         int[] nums= {10,5,2,6};

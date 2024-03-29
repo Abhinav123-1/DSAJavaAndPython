@@ -15,7 +15,8 @@ public class LongestSubArrayWithSumK {
 }
 
 class LongestSubArrayWithSumKSolutiopn{
-    public static int longestSubarrayWithSumK(int []a, long k) {
+    @SuppressWarnings("unlikely-arg-type")
+    public  int longestSubarrayWithSumK(int []a, long k) {
         //1, 2, 3, 1, 1, 1, 1
         //3
         Map<Integer,Integer> prefixMap = new HashMap<>();

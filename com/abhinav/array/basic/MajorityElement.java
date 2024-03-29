@@ -25,7 +25,7 @@ class MajorityElementSolution{
             }
         }
 
-        for(Entry entry:countMap.entrySet()){
+        for(Entry<Integer,Integer> entry:countMap.entrySet()){
             int key = (int)entry.getKey();
             int value = (int)entry.getKey();
             count = Math.max(count,value);
