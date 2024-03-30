@@ -14,8 +14,6 @@ public class CommonElementsinArray {
 
 class CommonElementsinArraySolution{
     public int[] findIntersectionValues(int[] nums1, int[] nums2) {
-        //[4,3,2,3,1] = [0,1,2,3,4]
-        //[2,2,5,2,3,6] = [0,1,2,3,4,5]
         int [] solArray = new int[2];
         Map<Integer,Integer> countMap = new HashMap<>();
         for(int num: nums2){

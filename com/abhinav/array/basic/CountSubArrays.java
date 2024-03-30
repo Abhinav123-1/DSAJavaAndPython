@@ -28,7 +28,7 @@ class CountSubArraysSolution{
              if(maxInWindow<k){
                 break;
              }
-             count += n-rightPointer+1;
+             count += n-rightPointer+1; 
            
              if (nums[leftPointer] == maxNum) {
                 maxInWindow--;
