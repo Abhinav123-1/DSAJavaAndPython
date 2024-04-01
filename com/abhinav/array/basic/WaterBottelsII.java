@@ -1,4 +1,4 @@
-package com.abhinav;
+package com.abhinav.array.basic;
 
 public class WaterBottelsII {
     public static void main(String[] args) {
