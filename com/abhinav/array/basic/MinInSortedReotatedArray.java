@@ -21,7 +21,6 @@ class MinInSortedReotatedArraySolution{
                 high = mid-1;               
             }
             min = Math.min(min,nums[mid]);
-
         }
         return min;  
      }
