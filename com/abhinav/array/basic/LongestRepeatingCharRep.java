@@ -16,7 +16,6 @@ class LongestRepeatingCharRepSolution{
     public int characterReplacement(String s, int k) {
         int maxCount = 0;
         Map<Character,Integer> map = new HashMap<>();
-        Map<Character,Integer> countMap = new HashMap<>();
         int maxLength = 0;
         int leftPointer = 0;  
         //AABCABBA
