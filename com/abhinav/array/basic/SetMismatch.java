@@ -28,7 +28,7 @@ class SetMismatchSolution{
         }
         sum+=nums.length;
        res[1] = sum-(finalSum-res[0]);
-       return res;
+       return res; 
 
     }
 }
