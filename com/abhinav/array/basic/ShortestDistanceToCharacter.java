@@ -28,7 +28,7 @@ class ShortestDistanceToCharacterSolution{
 
             if(high<=s.length() || s.charAt(high) == c){
                 while(low<=high){
-                    charList[low] = Math.min(Math.abs(high-low),Math.abs(low - oldLow)+1);
+                      charList[low] = Math.min(Math.abs(high-low),Math.abs(low - oldLow)+1);
                     low++;
                 }
                 oldLow = low;
