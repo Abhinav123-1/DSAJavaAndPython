@@ -3,23 +3,23 @@ package com.abhinav.array.basic;
 public class WaterBottelsII {
     public static void main(String[] args) {
         WaterBottelsIISolution wbsiis = new WaterBottelsIISolution();
-        System.out.println(wbsiis.maxBottlesDrunk(19, 12));
+        System.out.println(wbsiis.maxBottlesDrunk(17, 3));
         
     }
 }
 
 class WaterBottelsIISolution{
     public int maxBottlesDrunk(int numBottles, int numExchange) {
-        int maxBottels = 0;
-        maxBottels+=numBottles;
-        int toExchange = numBottles;
-        numBottles = 0;
-        while (toExchange>1) {
-            toExchange = toExchange - numExchange;
-            numExchange++;
-            numBottles++;
+        if(numBottles < numExchange){
+            return numBottles;
         }
-        maxBottels+=numBottles;
-        return maxBottels;
+        int sum = numBottles;
+            while(numBottles >= numExchange){
+                int rem  = numBottles / numExchange;
+                sum+=rem;
+                int rest  = numBottles % numExchange;
+                numBottles = rem+rest;
+            }
+        return sum;
     }
 }

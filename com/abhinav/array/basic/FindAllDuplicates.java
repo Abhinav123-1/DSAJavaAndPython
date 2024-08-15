@@ -11,6 +11,7 @@ public class FindAllDuplicates{
 }
 
 class FindAllDuplicatesSolution{
+    //max comit
     public List<Integer> findDuplicates(int[] nums) {
         Map<Integer,Integer> duMap = new HashMap<>();
         List<Integer> duList = new ArrayList<>();
